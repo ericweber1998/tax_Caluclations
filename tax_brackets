@@ -1,3 +1,5 @@
+# tax bracket file that lets you find out how much taxes you"ll pay based on your filling status
+
 gross = 100000
 net = float
 upper_difference = float
