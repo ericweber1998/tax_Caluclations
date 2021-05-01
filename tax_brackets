@@ -1,0 +1,88 @@
+gross = 100000
+net = float
+upper_difference = float
+status_input = input(f"File Status\ns - SINGLE\nj - MARRIED JOINT\nh - HEAD OF HOUSEHOLD\n:: ")
+if status_input.upper() == "S":
+    bra_1 = 109960.9
+    bra_2 = 14239.68
+    bra_3 = 18851.76
+    bra_4 = 10086.78
+    bra_5 = 3668.8799999999997
+    bra_6 = 995
+    if gross >= 523601:
+        upper_difference = (gross - 523601) * .37
+        net = upper_difference + bra_1 + bra_2 + bra_3 + bra_4 + bra_5 + bra_6
+    elif gross >= 209426:
+        upper_difference = (gross - 209426) * .35
+        net = upper_difference + bra_2 + bra_3 + bra_4 + bra_5 + bra_6
+    elif gross >= 164926:
+        upper_difference = (gross - 164926) * .32
+        net = upper_difference + bra_3 + bra_4 + bra_5 + bra_6
+    elif gross >= 86376:
+        upper_difference = (gross - 86376) * .24
+        net = upper_difference + bra_4 + bra_5 + bra_6
+    elif gross >= 40526:
+        upper_difference = (gross - 40526) * .22
+        net = upper_difference + bra_5 + bra_6
+    elif gross >= 9951:
+        upper_difference = (gross - 9951) * .12
+        net = upper_difference + bra_6
+    elif gross > 0:
+        net = bra_6
+    print(f"TAXES FOR SINGLE: ${net}")
+elif status_input.upper() == "J":
+    bra_1 = (628300-418851)*.35
+    bra_2 = (418850-329851)*.32
+    bra_3 = (329850-172751)*.24
+    bra_4 = (172750-81051)*.22
+    bra_5 = (81050-19901)*.12
+    bra_6 = 1990
+    if gross >= 628301:
+        upper_difference = (gross - 628301) * .37
+        net = upper_difference + bra_1 + bra_2 + bra_3 + bra_4 + bra_5 + bra_6
+    elif gross >= 418851:
+        upper_difference = (gross - 418851) * .35
+        net = upper_difference + bra_2 + bra_3 + bra_4 + bra_5 + bra_6
+    elif gross >= 329851:
+        upper_difference = (gross - 329851) * .32
+        net = upper_difference + bra_3 + bra_4 + bra_5 + bra_6
+    elif gross >= 172751:
+        upper_difference = (gross - 172751) * .24
+        net = upper_difference + bra_4 + bra_5 + bra_6
+    elif gross >= 81051:
+        upper_difference = (gross - 81051) * .22
+        net = upper_difference + bra_5 + bra_6
+    elif gross >= 19900:
+        upper_difference = (gross - 19900) * .12
+        net = upper_difference + bra_6
+    elif gross > 0:
+        net = bra_6
+    print(f"TAXES FOR MARRIED FILLING JOINT: ${net}")
+elif status_input.upper() == "H":
+    bra_1 = (523600 - 209401) * .35
+    bra_2 = (209400 - 164901) * .32
+    bra_3 = (164900 - 86351) * .24
+    bra_4 = (86350 - 54201) * .22
+    bra_5 = (54200 - 14201) * .12
+    bra_6 = 1420
+    if gross >= 523601:
+        upper_difference = (gross - 523601) * .37
+        net = upper_difference + bra_1 + bra_2 + bra_3 + bra_4 + bra_5 + bra_6
+    elif gross >= 209401:
+        upper_difference = (gross - 209401) * .35
+        net = upper_difference + bra_2 + bra_3 + bra_4 + bra_5 + bra_6
+    elif gross >= 164901:
+        upper_difference = (gross - 164901) * .32
+        net = upper_difference + bra_3 + bra_4 + bra_5 + bra_6
+    elif gross >= 86351:
+        upper_difference = (gross - 86351) * .24
+        net = upper_difference + bra_4 + bra_5 + bra_6
+    elif gross >= 54201:
+        upper_difference = (gross - 54201) * .22
+        net = upper_difference + bra_5 + bra_6
+    elif gross >= 14201:
+        upper_difference = (gross - 14201) * .12
+        net = upper_difference + bra_6
+    elif gross > 0:
+        net = bra_6
+    print(f"TAXES FOR HEAD OF HOUSEHOLD: ${net}")
